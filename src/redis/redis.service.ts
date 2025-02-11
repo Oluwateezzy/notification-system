@@ -6,7 +6,7 @@ export class RedisService {
   private readonly redis: Redis.Redis;
 
   constructor() {
-    this.redis = new Redis.default();
+    this.redis = new Redis.default(process.env.REDIS_URL);
   }
 
   getClient(): Redis.Redis {
