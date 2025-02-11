@@ -15,11 +15,11 @@ datasource db {
 }
 
 model Notification {
-  id String @id @default(auto()) @map("_id") @db.ObjectId
-  userId String
-  type String
-  message String
-  status String
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId    String
+  type      String
+  message   String
+  status    String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
