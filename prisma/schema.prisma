@@ -10,12 +10,12 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "mongodb"
   url      = env("DATABASE_URL")
 }
 
 model Notification {
-  id String @id @default(uuid()) @map("_id") @db.Uuid
+  id String @id @default(auto()) @map("_id") @db.ObjectId
   userId String
   type String
   message String
